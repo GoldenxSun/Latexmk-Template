@@ -1,0 +1,59 @@
+%! TEX root = ../../main.tex
+
+\usepackage[utf8]{inputenc}             % Proper display of umlauts (special German characters)
+\usepackage[ngerman]{babel}             % Set language to German
+\usepackage[T1]{fontenc}                % Font encoding for correct umlauts
+\usepackage{amsmath,amssymb,amsfonts}   % AMS math packages for symbols and fonts
+\usepackage[printonlyused]{acronym}     % Abbreviations, only print those used
+\usepackage{graphicx}                   % Include images
+\usepackage{float}                      % Control object placement
+\usepackage{titling}
+\usepackage[absolute]{textpos}          % Positioning elements in the text
+\usepackage{setspace}                   % Manually adjust spacing
+\usepackage[hidelinks]{hyperref}        % Hyperlinks in PDF without colored boxes
+\usepackage{mathptmx}                   % Use Times New Roman-like font for math
+\usepackage[scaled]{helvet}             % Use Helvetica for sans-serif font
+\usepackage{enumitem}                   % Simplified list handling with "enum"
+\usepackage{siunitx}                    % Proper representation of SI units
+\usepackage{tabularx}                   % Better tables
+\usepackage{pdfpages}                   % Insert multi-page PDFs
+\usepackage[german]{cleveref}           % Smarter referencing of sections and figures
+\usepackage{csquotes}                   % Contextual quotation marks
+\usepackage{pgfplots}                   % Create graphics and plots
+\usepackage[colorinlistoftodos]{todonotes}  % Use \todo to add reminders for later
+\usepackage{subfig}                     % Support for subfigures (multiple images side by side)
+\usepackage{caption}                    % Customize captions for figures and tables
+\captionsetup{
+    figurename=Abb.,                    % Rename "Figure" to "Abb." (Abbildung in German)
+    justification=raggedright,          % Left-align captions
+    singlelinecheck=false,              % Allow raggedright for single-line captions
+}
+\usepackage[
+    backend = bibtex,
+    style   = numeric,
+    sorting = none                      % Cite references in order of appearance
+]{biblatex}
+\addbibresource{literatur.bib}          % Add bibliography file
+
+\usepackage[                            % Set page margins
+    left    = 3cm,
+    right   = 3cm,
+    top     = 2.5cm,
+    bottom  = 3cm,
+    includeheadfoot                     % Include header and footer in the margin calculations
+]{geometry}
+
+% Header and footer settings -------------------------------------------------
+\usepackage[
+    automark,                           % Automatically include chapter info in the header
+    headsepline,                        % Line separating the header from the text
+    footsepline,                        % Line separating the footer from the text
+    ilines                              % Align the separation line to the left
+]{scrlayer-scrpage}
+
+\hypersetup{
+    pdftitle={Title},                   % Set PDF title
+    pdfsubject={Topic},                 % Set PDF subject
+    pdfauthor={Author},                 % Set PDF author
+    pdfkeywords={-}                     % Set PDF keywords
+}

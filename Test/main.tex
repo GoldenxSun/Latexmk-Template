@@ -1,0 +1,48 @@
+\documentclass[
+    a4paper,            % Paper size A4
+    12pt,               % Font size 12pt
+    fleqn,              % Left-aligned equations
+    oneside,            % Single-sided document
+    listof=totoc,       % Include lists (like figures/tables) in the table of contents
+    bibliography=totoc, % Include bibliography in the table of contents
+    index=totoc,        % Include index in the table of contents
+    final               % Document status (final/draft)
+]{scrartcl}
+
+\setlength{\marginparwidth}{2cm}        % Set width of the margin for margin notes
+\setlength{\topskip}{\ht\strutbox}      % Fix warning related to the top of a page skip
+
+\input{Chapter/00_Boilerplate/Packages.tex}                    % Load additional LaTeX packages from external file
+
+\pagestyle{scrheadings}                 % Use standard KOMA-Script page style with headers and footers
+\pgfplotsset{compat=1.18}               % Set pgfplots compatibility version for backward compatibility
+
+\begin{document}
+
+\input{Chapter/00_Boilerplate/CoverPage.tex}
+
+\input{Chapter/00_Boilerplate/Pagesetup.tex}                   % Apply custom page setup (headers, footers, etc.)
+
+\pagenumbering{Roman}                       % Start with Roman numerals for page numbering
+
+\newpage
+\tableofcontents                            % Generate the table of contents
+
+\newpage
+\listoffigures                              % Generate the list of figures
+
+\newpage                                    
+\listoftables                               % Generate the list of tables
+
+\newpage       
+\input{Chapter/00_Boilerplate/Glossar.tex}      % Include the glossary or acronym list
+
+\pagenumbering{arabic}                      % Switch to Arabic numerals for the main content
+\onehalfspacing                             % Set line spacing to 1.5 for better readability
+
+\input{Chapter/01_Introduction/01_Introduction.tex}
+
+\newpage
+\printbibliography
+
+\end{document}

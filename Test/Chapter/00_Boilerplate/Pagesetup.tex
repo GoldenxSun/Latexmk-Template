@@ -1,0 +1,35 @@
+%! TEX root = ../../main.tex
+
+% Chapter settings -----------------------------------------------------------
+\setcounter{secnumdepth}{3}             % Number subsubsections as well
+\setcounter{tocdepth}{3}                % Set ToC depth to 3
+% Chapter plural form in \cref
+\crefname{section}{Chapter}{Chapters}   % Correct naming for \cref
+\crefname{subsection}{Chapter}{Chapters}
+\crefname{subsubsection}{Chapter}{Chapters}
+\crefname{figure}{Figure}{Figures}
+
+\numberwithin{equation}{section}        % Number equations by chapter
+
+\setcounter{tocdepth}{2}                % Set the depth of the table of contents
+
+\setlength\parindent{0pt}               % No indentation for paragraphs
+\frenchspacing                          % Adds a bit more space after a period
+
+% Header settings
+\ihead{Title}                           % Chapter title in the header
+\chead{} 
+\ohead{\includegraphics[height=30 pt]{Images/example.jpg}}
+\setlength\headheight{36pt}             % Set header height
+
+% Footer settings
+\ifoot{\normalsize{ \copyright} \ \small{ Author, 2024  }} % Author's name in the footer
+\cfoot{}
+\ofoot{\pagemark}                       % Page number in the footer
+
+% Avoid orphans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+
+\onehalfspacing                         % Set 1.5 line spacing
